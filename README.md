@@ -1,24 +1,60 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> The Blog app is a classic example of a blog website. A fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
+- Ruby
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- PostgreSQL
 
-* Database creation
+## Install
 
-* Database initialization
+- Ruby
+- Ruby on Rails(as a gem)
+- Postgresql database
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy of the app, run the following commands in your terminal:
+- `git clone https://github.com/JEFFKAY16/ruby-blog-app.git`
+- `cd ruby-blog-app`
+- `bundle install`
 
-* Deployment instructions
+Run the following commands to run the app
 
-* ...
+- `rails db:create`
+- `rails db:migrate`
+- `rails s`
+
+In your browser, go to
+
+- `http://localhost:3000`
+
+## Testing
+- To install rspec: gem install rspec
+- To run all the tests: rspec ./spec
+
+
+## Authors
+
+👤 **Jeff Kayombo**
+
+- GitHub: [@JEFFKAY16](https://github.com/JEFFKAY16)
+- LinkedIn: [Jeff Kayombo](https://www.linkedin.com/in/jeff-kayombo/)
+- Twitter: [@jeff_kayombo](https://twitter.com/jeff_kayombo)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
