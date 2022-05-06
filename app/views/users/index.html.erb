@@ -3,7 +3,9 @@
   <div class="user-rows">
     <%= image_tag('profile.jpg', :alt => 'user', :width => '100px', :height => '100px') %>
     <div class="user-info">
-      <h2><%= user.name %></h2>
+      <%= link_to user_path(user.id) do %>
+        <h1><%= user.name %></h1>
+      <% end %>
       <p>Number of posts: <%= user.posts_counter %></p>
     </div>
   </div>

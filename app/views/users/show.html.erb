@@ -10,17 +10,23 @@
     <h3>Bio</h3>
     <p><%= @user.bio %></p>
   </div>
-  <div class="post-container">
-    <div class="user-posts-container">
-      <div class="each-post">
-        <h4>Post Number: 1</h4>
-        <p>This is my post<p>
-        <div class="post-left">
-          <p class="post-left">Comments: x | Likes: y</p>
+  <% @user.recent_posts.each  do |post| %>
+    <% if @user.id === post.author_id %>
+      <div class="post-container">
+        <div class="user-posts-container">
+          <div class="each-post">
+            <%= link_to user_post_path(@user.id, post.id) do %>
+              <h4><%=post.title%></h4>
+            <% end %>
+            <p><%=post.text%><p>
+            <div class="post-left">
+              <p class="post-left">Comments: <%=post.comments_counter%> | Likes: <%=post.likes_counter%> </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    <%end%>
+  <%end%>
   <div class="see-all-btn">
     <button type="button">See all posts</button>
   </div>
