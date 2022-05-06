@@ -1,1 +1,27 @@
-<h1>Show current user</h1>
+<div class="users-container">
+  <div class="user-rows">
+    <%= image_tag('profile.jpg', :alt => 'user', :width => '100px', :height => '100px') %>
+    <div class="user-info">
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+  <div class="user-bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <div class="post-container">
+    <div class="user-posts-container">
+      <div class="each-post">
+        <h4>Post Number: 1</h4>
+        <p>This is my post<p>
+        <div class="post-left">
+          <p class="post-left">Comments: x | Likes: y</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="see-all-btn">
+    <button type="button">See all posts</button>
+  </div>
+</div
