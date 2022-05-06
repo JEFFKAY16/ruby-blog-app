@@ -1,1 +1,22 @@
-<h1>Show current post</h1>
+<div class="users-container">
+  <div class="post-container">
+    <div class="user-posts-container">
+      <div class="each-post">
+        <div class="post-header-info">
+          <h4><%= @post.title %></h4>
+          <p class="post-left more-down">Comments: <%= @post.comments_counter %> | Likes: <%= @post.likes_counter %></p>
+        </div>
+        <p><%= @post.text %><p>
+      </div>
+    </div>
+    <% if @post.comments_counter === 0 %>
+      <p>No comments yet!</p>
+    <%else%>
+      <% @comments.each do |comment| %>
+        <div class="comments-for-post">
+          <p><%=comment.author.name%>: <%=comment.text%> </p>
+        </div>
+      <%end%>
+    <%end%>
+  </div>
+</div

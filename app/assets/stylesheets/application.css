@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+
+.users-container {
+  width: 30%;
+  margin: 50px auto;
+}
+
+.user-rows {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info {
+  width: 300px;
+  border: 2px solid #000;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info p {
+  padding-top: 10px;
+}
+
+.user-bio {
+  width: 476px;
+  border: 2px solid #000;
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.user-posts-container {
+  width: 476px;
+  border: 2px solid #000;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* .user-posts-container .post-left {
+  display: flex;
+  align-content: flex-end;
+  justify-content: end;
+  text-align: right;
+} */
+
+.see-all-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.see-all-btn button {
+  outline: none;
+  border: 1px solid #000;
+  background: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.comments-for-post {
+  width: 476px;
+  border: 2px solid #000;
+  padding: 1px 10px;
+  margin-top: 2px;
+}
+
+.post-header-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.post-header-info .more-down {
+  padding-top: 8px;
+}

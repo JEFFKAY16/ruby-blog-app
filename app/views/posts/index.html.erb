@@ -1,1 +1,25 @@
-<h1>Show all posts</h1>
+<div class="users-container">
+  <div class="user-rows">
+    <%= image_tag('profile.jpg', :alt => 'user', :width => '100px', :height => '100px') %>
+    <div class="user-info">
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post-container">
+      <div class="user-posts-container">
+        <div class="each-post">
+          <h4><%= post.title%></h4>
+          <p><%= post.text%><p>
+          <div class="post-left">
+            <p class="post-left">Comments: <%= post.comments_counter%> | Likes: <%= post.likes_counter%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <%end%>
+  <div class="see-all-btn">
+    <button type="button">Pagination</button>
+  </div>
+</div
