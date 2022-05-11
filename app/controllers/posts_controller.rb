@@ -18,8 +18,8 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = @user.posts.new(post_params)
     respond_to do |e|
-      e.html do 
-        if @post.save 
+      e.html do
+        if @post.save
           redirect_to "/users/#{@post.author.id}/posts/", notice: 'Post was successfully created.'
         else
           render :new
@@ -28,10 +28,9 @@ class PostsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
 end
