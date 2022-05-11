@@ -10,7 +10,9 @@
     <div class="post-container">
       <div class="user-posts-container">
         <div class="each-post">
-          <h4><%= post.title%></h4>
+          <%= link_to user_post_path(@user.id, post.id) do %>
+            <h4><%=post.title%></h4>
+          <% end %>
           <p><%= post.text%><p>
           <div class="post-left">
             <p class="post-left">Comments: <%= post.comments_counter%> | Likes: <%= post.likes_counter%></p>
@@ -20,6 +22,6 @@
     </div>
   <%end%>
   <div class="see-all-btn">
-    <button type="button">Pagination</button>
+    <button type="button"><%= link_to 'Create New Post', new_user_post_path(@user.id) %></button>
   </div>
 </div
