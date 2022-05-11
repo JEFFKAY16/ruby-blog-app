@@ -9,14 +9,18 @@
         <p><%= @post.text %><p>
       </div>
     </div>
+    <div class="comments-space">
+     <%= link_to "Add Comment", new_post_comment_path(@post) %>
+    </div>
     <% if @post.comments_counter === 0 %>
       <p>No comments yet!</p>
     <%else%>
       <% @comments.each do |comment| %>
         <div class="comments-for-post">
-          <p><%=comment.author.name%>: <%=comment.text%> </p>
+          <p><%=comment.author.name%>: <%=comment.text%></p>
         </div>
       <%end%>
     <%end%>
   </div>
 </div
+

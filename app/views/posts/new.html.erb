@@ -1,0 +1,10 @@
+<h1>New post</h1>
+<%= form_with model: @post, url: user_posts_path, scope: :post do |f| %>
+  <%= f.label :Title %>
+  <%= f.text_field :title, placeholder: 'Enter Post Title' %>
+  <br>
+  <%= f.label :Text %>
+  <%= f.text_area :text, placeholder: 'Enter Post Text'  %>
+  <br>
+  <%= f.submit %>
+<%end%>
