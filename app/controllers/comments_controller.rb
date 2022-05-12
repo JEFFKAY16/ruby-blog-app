@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
       flash[:success] = 'Comment was successfully added.'
     else
       render :new
+      flash[:success] = 'Unfortunately the  comment was not added.'
     end
   end
 
