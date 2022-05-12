@@ -20,9 +20,11 @@ class PostsController < ApplicationController
     respond_to do |e|
       e.html do
         if @post.save
-          redirect_to "/users/#{@post.author.id}/posts/", notice: 'Post was successfully created.'
+          redirect_to "/users/#{@post.author.id}/posts/"
+          flash[:success] = 'Post was successfully added.'
         else
           render :new
+          flash[:success] = 'Unfortunately the post was not created'
         end
       end
     end
