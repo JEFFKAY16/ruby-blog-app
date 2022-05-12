@@ -10,8 +10,10 @@ class CommentsController < ApplicationController
 
     if comment.save
       redirect_to user_post_path(current_user.id, post)
+      flash[:success] = 'Comment was successfully added.'
     else
       render :new
+      flash[:success] = 'Unfortunately the  comment was not added.'
     end
   end
 

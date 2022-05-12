@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments, :likes).order(created_at: :desc)
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(:comments, :likes).find(params[:id])
     @user = @post.author
     @comments = @post.comments
   end
@@ -20,9 +20,11 @@ class PostsController < ApplicationController
     respond_to do |e|
       e.html do
         if @post.save
-          redirect_to "/users/#{@post.author.id}/posts/", notice: 'Post was successfully created.'
+          redirect_to "/users/#{@post.author.id}/posts/"
+          flash[:success] = 'Post was successfully added.'
         else
           render :new
+          flash[:success] = 'Unfortunately the post was not created'
         end
       end
     end
