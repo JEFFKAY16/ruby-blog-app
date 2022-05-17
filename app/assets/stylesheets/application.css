@@ -98,3 +98,14 @@ a:visited {
 .post-header-info .more-down {
   padding-top: 8px;
 }
+
+/* --- Login page ------ */
+
+.login-container {
+  width: 35%;
+  margin: 200px auto;
+}
+
+.login-container .inputs {
+  width: 500px;
+}
