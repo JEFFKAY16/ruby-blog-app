@@ -27,6 +27,8 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "inputs" %>
     </div>
 
+    <%= f.hidden_field :bio, autofocus: true, value: "A biography, or simply bio, is a detailed description of a person's life. It involves more than just the basic facts like education, work, relationships, and death; it portrays a person's experience of these life events.", required: false %>
+
     <div class="actions">
       <%= f.submit "Sign up", class: "inputs" %>
     </div>
